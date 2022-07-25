@@ -1,0 +1,274 @@
+.header {
+    background-color: #000;
+    color: white;
+    height: 650px;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul.nav-items {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    list-style: none;
+}
+
+ul li a {
+    transition: color .2s ease-in-out;
+}
+
+ul li a:hover {
+    color: #FF385C;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.menu {
+    position: relative;
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    color: #fff;
+    width: 82%;
+    background-color: #000;
+    height: 100vh;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s ease-in-out;
+}
+
+.mobile-nav ul {
+    margin: 50px 0;
+}
+
+.mobile-nav ul li {
+    list-style-type: none;
+    margin: 40px;
+}
+
+#menu-button p {
+    position: relative;
+    z-index: 21;
+    background-color: #fff;
+    height: 3px;
+    cursor: pointer;
+    width: 22px;
+}
+
+#menu-button p::before, #menu-button p::after {
+    content: '';
+    height: 3px;
+    width: 22px;
+    background-color: #fff;
+    position: absolute;
+    transition: all .2s ease-in-out;
+}
+
+#menu-button p::before {
+    top: -6px;
+}
+
+#menu-button p::after {
+    top: 6px;
+}
+
+#toggle:checked~#menu-button p:before {
+    /* transform-origin: left center; */
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#toggle:checked~#menu-button p:after {
+    /* transform-origin: left center; */
+    transform: rotate(-45deg);
+    top: 0px;
+}
+
+#toggle:checked~#menu-button>p {
+    background-color: #000;
+}
+
+#toggle:checked .mobile-nav {
+    display: flex;
+}
+
+#toggle {
+    display: none;
+    position: relative;
+    z-index: 90
+}
+
+
+.header-hero {
+    height: 330px;
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-hero>.headline>h1 {
+    font-size: 2.8rem;
+    width: 80%;
+    text-align: center;
+}
+
+.header-hero>.headline>p {
+    margin: 25px 0 0;
+    font-size: .75rem;
+}
+
+.header-hero>.cta {
+    margin: 35px 0 0;
+}
+
+.cta-input {
+    border: none;
+    padding: 20px;
+    width: 350px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    outline: none;
+}
+
+.cta-button {
+    width: 150px;
+    padding: 20px;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #FF385C;
+    color: white;
+    cursor: pointer;
+}
+
+.showcase {
+    text-align: center;
+}
+
+.header-showcase {
+    width: 90%;
+    margin-top: -120px;
+}
+
+/* Main section */
+.main-content.waitlist {
+    margin-top: 40px;
+}
+
+/* Footer section */
+.footer-cta {
+    text-align: center;
+    margin: 40px;
+}
+
+.footer-cta h2 {
+    font-size: 1.8rem;
+    margin: 30px 0;
+}
+
+.footer-cta input {
+    background-color: #f1f1f1;
+}
+
+footer {
+    background-color: #DDD;
+    margin-top: 80px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials img {
+    width: 20%;
+    margin: 0 5px;
+}
+
+
+@media (max-width: 992px) {
+    ul.nav-items {
+        width: 45%;
+    }
+
+    .header-hero>.headline>h1 {
+        width: 100%;
+    }
+
+    .container {
+        padding: 15px 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu, .mobile-nav {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-hero>.headline>h1 {
+        font-size: 1.7rem;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .header-showcase {
+        width: 100%;
+    }
+
+    .cta-input {
+        padding: 18px 18px 20px;
+        width: 190px;
+        font-size: .6rem;
+    }
+
+    .cta-button {
+        width: 100px;
+        padding: 18px 18px 20px;
+        font-size: .6rem;
+    }
+
+    .footer-cta {
+        margin: 40px 0;
+    }
+
+    .container {
+        padding: 15px 40px;
+    }
+
+    ul.nav-items {
+        display: none
+    }
+
+    .footer-cta h2 {
+        font-size: 1.4rem;
+    }
+}

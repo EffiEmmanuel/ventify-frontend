@@ -1,0 +1,85 @@
+.ventify-details {
+    /* display: flex;
+    justify-content: space-between; */
+    /* align-items: center; */
+    margin: 40px 20px 120px;
+}
+
+.ventify-details h2 {
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+.ventify-details .left  ul {
+    font-size: 1.1rem;
+}
+
+.ventify-details .left {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    /* top: 70px;    */
+    width: 100%;
+}
+
+.ventify-details .left ul {
+    width: 45%;
+    position: relative;
+    top: 10px;
+}
+
+.ventify-details .left ul li {
+    margin: 20px 0;
+    position: relative;
+    left: 20px;
+}
+
+.ventify-detail-image {
+    width: 350px;
+    position: relative;
+    bottom: 70px;
+}
+
+@media (max-width: 992px) {
+    .ventify-details {
+        /* flex-direction: column; */
+        /* margin-top: 0; */
+        align-items: center;
+    }
+
+    .ventify-detail-image {
+        width: 300px;
+        bottom: 35px;
+    }
+
+    .ventify-details h2 {
+        font-size: 1.8rem;
+    }
+
+    .ventify-details .left ul {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ventify-details h2 {
+        text-align: center;
+    }
+
+    .ventify-details h2 {
+        text-align: center;
+    }
+
+    .ventify-detail-image {
+        margin-top: 70px;
+    }
+
+    .ventify-details .left {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .ventify-details .left ul {
+        width: 100%;
+    }
+}
